@@ -29,10 +29,7 @@ class SettingApp extends StatelessWidget {
               S.current.Hello,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            LanguageDropDownButton(
-              lastTheme: savedTheme,
-              lastLanguage: savedLanguage,
-            ),
+            LanguageDropDownButton(lastLanguage: savedLanguage),
           ],
         ),
       ),

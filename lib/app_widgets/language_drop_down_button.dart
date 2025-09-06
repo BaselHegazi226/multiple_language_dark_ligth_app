@@ -4,13 +4,8 @@ import 'package:multiple_language_and_theme_ligth_dark_app/settings/app_setting_
 import 'custom_drop_down_item.dart';
 
 class LanguageDropDownButton extends StatefulWidget {
-  const LanguageDropDownButton({
-    super.key,
-    required this.lastTheme,
-    required this.lastLanguage,
-  });
+  const LanguageDropDownButton({super.key, required this.lastLanguage});
   final dynamic lastLanguage;
-  final dynamic lastTheme;
   static final List<String> _items = ['العربية', 'English'];
 
   @override
@@ -96,7 +91,7 @@ class _LanguageDropDownButtonState extends State<LanguageDropDownButton> {
     }
   }
 
-  String dropDownValueFun({required String language}) {
+  String dropDownValueFun({required String? language}) {
     switch (language) {
       case 'english':
         return 'English';
