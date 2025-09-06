@@ -1,5 +1,3 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -21,13 +19,7 @@ void main() async {
     key: CacheHelperKeys.keyLanguage,
   );
 
-  runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) =>
-          MyApp(savedTheme: savedTheme, savedLanguage: savedLanguage),
-    ),
-  );
+  runApp(MyApp(savedTheme: savedTheme, savedLanguage: savedLanguage));
 }
 
 class MyApp extends StatelessWidget {
