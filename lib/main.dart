@@ -45,6 +45,8 @@ class MyApp extends StatelessWidget {
             ],
             supportedLocales: S.delegate.supportedLocales,
             locale: Locale(appSettingCubit.getLanguage()),
+            themeAnimationDuration: const Duration(milliseconds: 400),
+            themeAnimationCurve: Curves.easeInOut,
             themeMode: appSettingCubit.getTheme(),
             theme: ThemeData(
               scaffoldBackgroundColor: Colors.white,
